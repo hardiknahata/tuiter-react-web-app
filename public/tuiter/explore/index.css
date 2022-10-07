@@ -1,45 +1,12 @@
 body {
-    font-family: "Arial";
-    background-color: black;
-    margin-left: 16px;
-    color: white;
+    /*font-family: "Arial";*/
+    /* background-color: black; */
+    /*color: white;*/
 }
 
-.wd-search-div {
-    display: inline;
-}
-
-.wd-search-bar { 
-    border-left-color: rgb(47, 51, 54);
-    color: white; 
-    background-color: darkgray;
-    width: 90%;
-    margin-left: 20px;
-    margin-right: 40px;
-    height: 30px;
-    border-radius: 50px;
-}
-
-input{
-    text-indent:35px;
-}
-
-.wd-search-icon {
-    margin-right: 10px;
-    position: absolute;
-    left:50px;
-    top:15px;
-    width: 20px;
-    height: 20px;
-}
-
-.wd-edit-settings {
-    color: rgb(29,161,242);
-    padding-right: 12px;
-    text-decoration: none;
-    float: right;
-    position: relative;
-    font-size: 35px;
+.wd-search-tuiter {
+    bottom: 7px;
+    left: 10px;
 }
 
 .wd-nav-tabs {
@@ -48,86 +15,11 @@ input{
     padding: 0px;
 }
 
-.wd-nav-tabs a {
-    text-decoration: none;
-    color: rgb(110, 118, 125);
-}
-
 .wd-nav-tabs li {
     list-style-type: none;
     display: inline-block;
-    padding: 16px;
-    font-size: 15px;
-    color: rgb(110, 118, 125);
 }
 
 .wd-nav-tabs .wd-selected {
-    color: rgb(29,161,242);
     border-bottom: solid 4px rgb(29,161,242);
-}
-
-.wd-nav-tabs .wd-selected a {
-    color: rgb(29,161,242);
-}
-
-.wd-trend-topic {
-    font-size: 13px;
-    line-height: 0.1;
-    color: rgb(110,118,125);
-}
-
-.wd-trend-title {
-    font-size: 15px;
-    color: white;
-    line-height: 0.2;
-}
-
-.wd-trending-topics {
-    padding-bottom: 12px;
-    padding-left: 12px;
-    height: 55px;
-    border-bottom: 1px solid rgb(47, 51, 54);
-    border-left: 1px solid rgb(47, 51, 54);
-    border-right: 1px solid rgb(47, 51, 54);
-    border-top: 1px solid rgb(47, 51, 54);
-}
-
-.wd-trend-options {
-    float: right;
-    padding-right: 12px;
-    /* padding-top: 12px; */
-    width: 20px
-
-}
-
-.wd-trending-topics-img {
-    padding-left: 12px;
-    height: 132px;
-    border-bottom: 1px solid rgb(47, 51, 54);
-    border-left: 1px solid rgb(47, 51, 54);
-    border-right: 1px solid rgb(47, 51, 54);
-    border-top: 1px solid rgb(47, 51, 54);
-}
-
-
-.wd-tuit-author {
-    color: white;
-    font-style: bold;
-}
-
-.wd-tuit-time {
-    color: rgb(110,118,125);
-}
-
-.wd-tuit-img{
-    float:right;
-    border-radius: 25px;
-    margin-right: 16px;
-    margin-top: 16px; 
-    width:100px;
-    height:100px;   
-}
-
-.wd-author-handle-img{
-    width: 15px;
 }
