@@ -23,3 +23,39 @@ body {
 .wd-nav-tabs .wd-selected {
     border-bottom: solid 4px rgb(29,161,242);
 }
+
+/* @media (max-width: 768px) {
+    .btn-primary.override-bs {
+      padding:2px 4px;
+      font-size:80%;
+      line-height: 1;
+    }
+  } */
+  
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .btn-primary.override-bs {
+        /* padding: 10px 20px; */
+        font-size: 20px;
+        /* border-radius: 10px;         */
+      /* padding:4px 9px; */
+      /* font-size:250%; */
+      /* height: 50%; */
+      /* width: 50%; */
+      /* padding: 5px 40px 0px 25px; */
+      /* text-align: center; */
+      /* font-size: 20px; */
+      /* border-radius: 10px; */
+      /* width:150%;  */
+    }
+  }
+
+/* .btn-primary.override-bs {
+    background-color: #a90dfd;
+    border-color: #fd0d51;
+    border-width: 10px;
+    border-radius: 20px;
+    border-style: dashed;
+    font-size: 2em;
+    font-weight: bolder;
+ }
+  */

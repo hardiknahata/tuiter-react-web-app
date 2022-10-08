@@ -1,0 +1,98 @@
+body {
+    background-color: black;
+    color: white;
+    /* border-width: 1px;
+    border-color: grey;
+    border-style: solid; */
+    /* border-spacing: 0px; */
+}
+
+.form-control {
+    background-color: #212327;
+    color: white;
+    border-color: #212327;
+}
+
+.wd-search-tuiter {
+    bottom: 7px;
+    left: 10px; 
+    color: grey;
+}
+
+.nav-tabs .nav-item .nav-link {
+  background-color: black;
+  color: grey;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  border: 0px;
+  border-bottom: 4px solid #1DA1F2;
+  color: white;
+}
+
+.big-img {
+  border-width: 1px;
+  border-color: grey;
+  border-style: solid;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.cog {
+  color: white;
+  font-size: 20px;
+}
+
+
+.list-group .list-group-item {
+    background-color: black;
+    color: white; 
+} 
+
+
+.list-group .list-group-item-action.active {
+  background-color: black;
+  color: white;
+  font-weight: 900; 
+  border: 0;
+} 
+
+.list-group .follow-section {
+    background-color: #212327;
+}
+
+.list-group-item .follow-section {
+  background-color: #212327;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: white !important;
+  color: black;
+  font-style: bold;
+  border: 0px;
+}
+
+.privacy-links {
+  color: grey;
+}
+
+.privacy-links a{
+  color: grey;
+  text-decoration: none;
+}
+
+
+.override-bottom-border {
+  border-bottom: 0;
+}
+
+.main-content {
+  border-width: 1px;
+  border-color: grey;
+  border-style: solid;
+  border-spacing: 0px;
+  /* border-bottom: 0px; */
+  border-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px; 
+}
