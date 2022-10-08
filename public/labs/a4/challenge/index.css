@@ -30,6 +30,12 @@ body {
   color: white;
 }
 
+.nav-tabs .nav-item .nav-link:hover {
+  border: 0px;
+  /* border-bottom: 4px solid #1DA1F2; */
+  color: white;
+}
+
 .big-img {
   border-width: 1px;
   border-color: grey;
