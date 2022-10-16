@@ -6,12 +6,12 @@ const ExploreComponent = () => {
                 <div class="col-10">
                     <div class="position-relative">
                         <input class="ps-5 form-control rounded-pill" placeholder="Search Tuiter"/>
-                        <span class="position-absolute wd-search-tuiter"> <i class="fas fa-magnifying-glass"></i></span>
+                        <span class="position-absolute wd-search-tuiter"> <i class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
                 </div>
 
                 <div class="col-2">
-                    <a href="../edit-profile.html"> <i class="mt-1 ms-4 fas fa-gear fa-2x "></i> </a>
+                    <a href="../edit-profile.html" class=""> <i class="mt-1 ms-4 fa-solid fa-gear fa-2x "></i> </a>
                 </div>
             </div>
 
