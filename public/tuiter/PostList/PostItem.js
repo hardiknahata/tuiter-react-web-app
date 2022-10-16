@@ -22,7 +22,7 @@ const checkImage = (post) => {
 const checkLink = (post) => {
     if(post.hasLink){
         return `
-            <p class="ps-2 pt-1"> ${post.link_title} <br>
+            <p class="ps-2 pt-1 pe-1"> ${post.link_title} <br>
             <span class="text-secondary"> ${post.link_text}
             </span>
             <br>
@@ -44,7 +44,7 @@ const checkLink = (post) => {
             <a class="float-end text-secondary" href="#"> <i class="fa-solid fa-ellipsis"></i> </a>    
             <div class="ps-2"> ${post.userName} ${checkVerified(post)} <span class = "ps-1 text-secondary">@${post.handle} ${getPostTime(post)}</span>
             </div>
-            <div class="ps-2 pt-2 pe-2">
+            <div class="ps-2 pt-2 pe-1">
                 <p class="ps-1"> ${post.tuit} </p>
                 <div class="border rounded border-secondary">
                     ${checkImage(post)}
@@ -52,10 +52,10 @@ const checkLink = (post) => {
                 </div>
 
                 <ul class="d-flex justify-content-between list-group list-group-horizontal wd-reactions">
-                    <li class="list-group-item border-0 override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-regular fa-comment"></i> &nbsp; ${post.comments} </a></li>
-                    <li class="list-group-item border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-solid fa-retweet"></i> &nbsp; ${post.retuits} </a></li>
-                    <li class="list-group-item border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-regular fa-heart"></i> &nbsp; ${post.likes} </a></li>
-                    <li class="list-group-item border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-solid fa-arrow-up-from-bracket"></i></i></a></li>
+                    <li class="list-group-item text-nowrap border-0 override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-regular fa-comment"></i> &nbsp; ${post.comments} </a></li>
+                    <li class="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-solid fa-retweet"></i> &nbsp; ${post.retuits} </a></li>
+                    <li class="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-regular fa-heart"></i> &nbsp; ${post.likes} </a></li>
+                    <li class="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-solid fa-arrow-up-from-bracket"></i></i></a></li>
                 </ul>
             </div>
         </div>
