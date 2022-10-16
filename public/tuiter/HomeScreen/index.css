@@ -1,0 +1,166 @@
+body {
+    /*font-family: "Arial";*/
+    /* background-color: black; */
+    /*color: white;*/
+}
+
+.wd-search-tuiter {
+    bottom: 7px;
+    left: 10px;
+}
+
+.wd-nav-tabs {
+    width: 100%;
+    color: rgb(29,161,242);
+    padding: 0px;
+}
+
+.wd-nav-tabs li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.wd-nav-tabs .wd-selected {
+    border-bottom: solid 4px rgb(29,161,242);
+}
+
+  
+@media (min-width: 992px) and (max-width: 1199px) {
+  .btn-primary.override-bs {
+      font-size: 20px;
+  }
+}
+
+row>*,.profile-pic { 
+  width: 50px;
+  height:50px;
+}
+
+.override-lg {
+  background-color: black;
+}
+
+
+/* .wd-reactions .wd-reaction-selected a{
+  color: red;
+} */
+
+/* .wd-saved-tuits {
+  position: relative;
+  border-left: 1px solid rgb(47, 51, 54);
+  height: 630px;
+  border-right: 1px solid rgb(47, 51, 54);
+  border-bottom: 1px solid rgb(47, 51, 54);
+  margin-top: 12px; 
+} */
+
+
+
+/* 
+.wd-tuit-options {
+  border-right: 1px solid rgb(47, 51, 54);
+  padding-top: 2px;
+  padding-right: 12px;
+  float: right;
+  width: 20px;
+}
+
+
+
+.wd-tuit-text {
+  color:white;
+  font-size: 15px;
+  width: 506px;
+  padding-left: 70px;
+  padding-bottom: 12px;
+}
+
+.wd-tuit-link {
+  width: 12px;
+}
+
+.wd-saved-tuit-img {
+  position: relative;
+  margin-left: 65px;
+  width: 504px;
+  height: 264px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.wd-tuit-img-title {
+  color:white;
+  font-size: 15px;
+  font-style: bold;
+  margin-left: 12px;
+}
+
+.wd-tuit-img-text {
+  color:lightgray;
+  font-size: 15px;
+  margin-left: 12px;
+}
+
+.wd-tuit-img-text a {
+  color:gray;
+  text-decoration: none;
+}
+
+.wd-profile-img {
+  float:left;
+  border-radius: 48px;
+  margin-left: 16px;
+  width:48px;
+  height:48px;   
+}
+
+.wd-tuit-author {
+  padding-left: 70px;
+  font-size: 15px;
+  color: white;
+}
+
+.wd-author-handle {
+  font-size: 15px;
+  color: gray;
+}
+
+.wd-reactions {
+  display: relative;
+  list-style-type: none;
+  padding-left: 70px;
+  padding-top: 12px;
+  width: 504px;
+}
+
+.wd-reactions li{
+  display: inline-block;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.wd-reactions a{
+  color: gray;
+  text-decoration: none;
+  display: inline-flex;
+  padding-right: 70px;
+}
+
+.wd-reaction-icons {
+  padding-right: 12px;
+  width: 20px;
+  height: 20px;
+}
+
+.wd-reactions .wd-reaction-selected a{
+  color: red;
+}
+
+.wd-img-txt-container {
+  width: 504px;
+  margin-left: 65px;
+  border:1px solid rgb(47, 51, 54);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  
+} */
