@@ -3,7 +3,7 @@ import todos from "./todos.js";
 
 const TodoList = () => {
    return(`
-      <ul>
+      <ul style="list-style: none;">
          ${
             todos.map(todo => {
                return(TodoItem(todo));

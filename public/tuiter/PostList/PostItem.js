@@ -51,7 +51,7 @@ const checkLink = (post) => {
                     ${checkLink(post)}
                 </div>
 
-                <ul class="d-flex justify-content-between list-group list-group-horizontal wd-reactions">
+                <ul class="d-flex justify-content-between list-group list-group-horizontal">
                     <li class="list-group-item text-nowrap border-0 override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-regular fa-comment"></i> &nbsp; ${post.comments} </a></li>
                     <li class="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-solid fa-retweet"></i> &nbsp; ${post.retuits} </a></li>
                     <li class="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-regular fa-heart"></i> &nbsp; ${post.likes} </a></li>

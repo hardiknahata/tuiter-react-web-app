@@ -1,5 +1,5 @@
 export default [
-    {   title: 'Buy milk', status: 'CANCELED',
+    {   title: 'Buy milk', status: 'CANCELLED',
         done: true,
     },
     {   title: 'Pickup the kids',
