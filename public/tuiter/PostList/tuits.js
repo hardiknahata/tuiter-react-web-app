@@ -24,6 +24,7 @@ export default [
         handle: "nypost",
         time: "23h",
         tuit: "Grimes seen reading Karl Marx following split with world's richest man Elon Musk",
+        tuitTextLink: "trib.al/nx2Gfaq",
         hasImage: true,
         image: "../images/grimes.jpeg",
         hasLink: false,

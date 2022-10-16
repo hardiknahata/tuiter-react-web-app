@@ -33,6 +33,25 @@ const checkLink = (post) => {
     return "";
 }
 
+const renderTuit = (post) => {
+    const tuitText = post.tuit.split(" ");
+    var finalTuit = '';
+
+    for(let i = 0; i < tuitText.length; i++){
+        if(tuitText[i].search('@') != -1){
+            finalTuit += ' <a class="text-decoration-none" href="#">'+ tuitText[i] +'</a> ';
+        }
+        else{
+            finalTuit += tuitText[i] + ' ';
+        }
+    }
+
+    if(post.tuitTextLink){
+        finalTuit += '<a class="text-decoration-none" href="#">' + post.tuitTextLink + '</a>';
+    }
+
+    return finalTuit;
+}
 
 
 
@@ -45,7 +64,7 @@ const checkLink = (post) => {
             <div class="ps-2"> ${post.userName} ${checkVerified(post)} <span class = "ps-1 text-secondary">@${post.handle} ${getPostTime(post)}</span>
             </div>
             <div class="ps-2 pt-2 pe-1">
-                <p class="ps-1"> ${post.tuit} </p>
+                <p class="ps-1"> ${renderTuit(post)} </p>
                 <div class="border rounded border-secondary">
                     ${checkImage(post)}
                     ${checkLink(post)}
