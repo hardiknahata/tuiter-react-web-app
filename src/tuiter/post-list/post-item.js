@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const checkVerified = (post) => {
     // <h1>delete</h1>
@@ -17,33 +19,32 @@ const getPostTime = (post) => {
 
 const checkImage = (post) => {
     if(post.hasImage){
-        return <img className="w-100 img-fluid rounded border-bottom border-secondary" src={`/tuiter/images/${post.image}`}/>;
+        return <img className="w-100 img-fluid rounded-top border-bottom border-secondary" src={`/tuiter/images/${post.image}`}/>;
     }
     return "";
 }
 
 const checkLink = (post) => {
     if(post.hasLink){
-        return `
-        <div>
-            <p className="ps-2 pt-1 pe-1"> ${post.link_title} <br>
-            <span className="text-secondary"> ${post.link_text} </span>
-            <br>
-            <a className="text-secondary text-decoration-none" href="#"> <i className="fa-solid fa-link"></i> ${post.link_url} </a>
-            </p> 
-        </div>
-        `
+        return <div>
+                    <p className="ps-2 pt-1 pe-1"> {post.link_title} <br></br>
+                    <span className="text-secondary"> {post.link_text} </span>
+                    <br></br>
+                    <a className="text-secondary text-decoration-none" href="#"> <FontAwesomeIcon icon="link" /> {post.link_url} </a>
+                    </p> 
+              </div>
+        
     }
     return "";
 }
 
 const renderTuit = (post) => {
     const tuitText = post.tuit.split(" ");
-    var finalTuit = '';
+    var finalTuit = ``;
 
     for(let i = 0; i < tuitText.length; i++){
         if(tuitText[i].search('@') != -1){
-            finalTuit += <a className="text-decoration-none">'+ {tuitText[i]} + </a>;
+            finalTuit += <a className="text-decoration-none">${tuitText[i]} </a>;
         }
         else{
             finalTuit += tuitText[i] + ' ';
@@ -76,13 +77,14 @@ const PostItem = (
                     <div className="border rounded border-secondary">
                         {checkImage(post)}
                         {checkLink(post)}
+                        
                     </div>
 
                     <ul className="d-flex justify-content-between list-group list-group-horizontal">
-                        <li className="list-group-item text-nowrap border-0 override-lg"> <a className="text-secondary text-decoration-none"> <i className="fa-regular fa-comment"></i>  {post.comments} </a></li>
-                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a className="text-secondary text-decoration-none"> <i className="fa-solid fa-retweet"></i> &nbsp; {post.retuits} </a></li>
-                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a className="text-secondary text-decoration-none"> <i className="fa-regular fa-heart"></i> &nbsp; {post.likes} </a></li>
-                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a className="text-secondary text-decoration-none"> <i className="fa-solid fa-arrow-up-from-bracket"></i></a></li>
+                        <li className="list-group-item text-nowrap border-0 override-lg"> <a className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="comment" size="lg"/>  {post.comments} </a></li>
+                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="retweet" size="lg"/> &nbsp; {post.retuits} </a></li>
+                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="heart" color="red" size="lg"/> &nbsp; {post.likes} </a></li>
+                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="share" size="lg"/></a></li>
                     </ul>
                 </div>
         </div>
@@ -91,33 +93,3 @@ const PostItem = (
    };
 export default PostItem;
    
-
-
-// //  const PostItem = (post) => {
-// //     return(`
-// //     <div class="mt-2 list-group-item override-lg">
-// //         <img class="profile-pic float-start rounded-circle" src="${post.avatarIcon}"/>
-// //         <div class = "ps-5">
-// //             <a class="float-end text-secondary" href="#"> <i class="fa-solid fa-ellipsis"></i> </a>    
-// //             <div class="ps-2"> ${post.userName} ${checkVerified(post)} <span class = "ps-1 text-secondary">@${post.handle} ${getPostTime(post)}</span>
-// //             </div>
-// //             <div class="ps-2 pt-2 pe-1">
-// //                 <p class="ps-1"> ${renderTuit(post)} </p>
-// //                 <div class="border rounded border-secondary">
-// //                     ${checkImage(post)}
-// //                     ${checkLink(post)}
-// //                 </div>
-
-// //                 <ul class="d-flex justify-content-between list-group list-group-horizontal">
-// //                     <li class="list-group-item text-nowrap border-0 override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-regular fa-comment"></i> &nbsp; ${post.comments} </a></li>
-// //                     <li class="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-solid fa-retweet"></i> &nbsp; ${post.retuits} </a></li>
-// //                     <li class="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-regular fa-heart"></i> &nbsp; ${post.likes} </a></li>
-// //                     <li class="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" class="text-secondary text-decoration-none"> <i class="fa-solid fa-arrow-up-from-bracket"></i></i></a></li>
-// //                 </ul>
-// //             </div>
-// //         </div>
-// //     </div>
-// //     `);
-// //  }
-
-// //  export default PostItem;
