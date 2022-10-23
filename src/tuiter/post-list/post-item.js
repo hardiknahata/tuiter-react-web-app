@@ -1,6 +1,7 @@
 import React from "react";
 
 const checkVerified = (post) => {
+    // <h1>delete</h1>
     // if(post.verified){
     //     return `<i class="ps-1 pt-1 fa fa-check-circle"></i>`;
     // }
