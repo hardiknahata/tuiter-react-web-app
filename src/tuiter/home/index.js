@@ -1,11 +1,13 @@
 import React from "react";
-import PostSummaryList from "../post-summary-list";
+import PostList from "../post-list";
+import PostItem from "../post-list/post-item";
 import "./index.css";
 
 const HomeComponent = () => {
  return(
    <>
   <h1>HOME COMPONENT</h1>
+  <PostItem/>
    </>
  );
 };
