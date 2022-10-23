@@ -52,8 +52,8 @@ const NavigationSidebar = () => {
      </a>
 
      <a className={`list-group-item list-group-item-action
-                    ${active === 'more'?'active':''}`}>
-       <span className={`d-none d-xl-inline d-xxl-inline`}>More</span>
+                    ${active === 'more'?'active':''}`}> <FontAwesomeIcon  icon="ellipsis"/>
+       <span className={`d-none d-xl-inline d-xxl-inline`}> More</span>
      </a>
 
    </div>

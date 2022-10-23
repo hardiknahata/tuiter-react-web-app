@@ -3,10 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const checkVerified = (post) => {
-    // <h1>delete</h1>
-    // if(post.verified){
-    //     return `<i class="ps-1 pt-1 fa fa-check-circle"></i>`;
-    // }
+    if(post.verified){
+        return <FontAwesomeIcon icon="check-circle"/>
+    }
     return "";
 }
 
@@ -50,11 +49,7 @@ const renderTuit = (post) => {
             finalTuit += tuitText[i] + ' ';
         }
     }
-
-    if(post.tuitTextLink){
-        finalTuit += <a className="text-decoration-none"> + {post.tuitTextLink} + </a>;
-    }
-    console.log(finalTuit)
+    
     return finalTuit;
 }
 
@@ -73,7 +68,9 @@ const PostItem = (
                 <div className="ps-2"> {post.userName} {checkVerified(post)} <span className = "ps-1 text-secondary">@{post.handle} {getPostTime(post)}</span>
                 </div>
                 <div className="ps-2 pt-2 pe-1">
-                    <p className="ps-1"> {renderTuit(post)} </p>
+                    <p className="ps-1"> {renderTuit(post)} <a className="text-decoration-none"> {post.tuitTextLink} </a> </p>
+                    
+
                     <div className="border rounded border-secondary">
                         {checkImage(post)}
                         {checkLink(post)}
@@ -81,10 +78,10 @@ const PostItem = (
                     </div>
 
                     <ul className="d-flex justify-content-between list-group list-group-horizontal">
-                        <li className="list-group-item text-nowrap border-0 override-lg"> <a className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="comment" size="lg"/>  {post.comments} </a></li>
-                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="retweet" size="lg"/> &nbsp; {post.retuits} </a></li>
-                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="heart" color="red" size="lg"/> &nbsp; {post.likes} </a></li>
-                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="share" size="lg"/></a></li>
+                        <li className="list-group-item text-nowrap border-0 override-lg"> <a href="#" className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="comment" size="lg"/>  {post.comments} </a></li>
+                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="retweet" size="lg"/> {post.retuits} </a></li>
+                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="heart" color="red" size="lg"/> {post.likes} </a></li>
+                        <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" className="text-secondary text-decoration-none"> <FontAwesomeIcon icon="share" size="lg"/></a></li>
                     </ul>
                 </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const WhoToFollowListItem = (
  {
@@ -9,7 +10,7 @@ const WhoToFollowListItem = (
     <div className="list-group-item">
     <div className={`ms-2 d-inline fw-bolder`}></div>
         <img className={`mt-1 float-start rounded-circle`} src={`/tuiter/images/${who.avatarIcon}`} width="40px"/>
-    <div className={`fw-bolder d-inline-block`}>{who.userName} <i className={`fa fa-check-circle`}></i>
+    <div className={`fw-bolder d-inline-block`}>{who.userName} <FontAwesomeIcon icon="check-circle"/>
             <div className={`text-secondary fw-normal`}>
                 @{who.handle}
             </div>

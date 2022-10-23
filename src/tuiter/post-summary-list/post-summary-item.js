@@ -1,9 +1,10 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const checkVerified = (post) => {
-  // if(post.verified){
-  //     return `<i class="fa fa-check-circle"></i>`;
-  // }
+  if(post.verified){
+      return <FontAwesomeIcon icon="check-circle"/>
+  }
   return "";
 }
 
