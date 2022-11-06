@@ -46,10 +46,15 @@ const NavigationSidebar = () => {
        <span className={`d-none d-xl-inline d-xxl-inline`}> Lists</span>
      </a>
 
-     <a className={`list-group-item list-group-item-action
+     {/* <a className={`list-group-item list-group-item-action
                     ${active === 'profile'?'active':''}`}> <FontAwesomeIcon icon="user"/>
        <span className={`d-none d-xl-inline d-xxl-inline`}> Profile</span>
-     </a>
+     </a> */}
+
+     <Link to="/tuiter/profile" className={`list-group-item list-group-item-action
+                    ${active === 'profile'?'active':''}`}> <FontAwesomeIcon icon="user"/>
+       <span className={`d-none d-xl-inline d-xxl-inline`}> Profile</span>
+     </Link>     
 
      <a className={`list-group-item list-group-item-action
                     ${active === 'more'?'active':''}`}> <FontAwesomeIcon  icon="ellipsis"/>

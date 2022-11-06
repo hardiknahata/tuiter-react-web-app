@@ -1,0 +1,16 @@
+{
+    "_id": 1024,
+    "firstName": "Elon",
+    "lastName": "Musk",
+    "handle": "elonmusk",
+    "profilePicture": "/tuiter/images/profile-pictures/elonmusk.jpeg",
+    "bannerPicture": "/tuiter/images/inspiration4.jpeg",
+    "bio": "Creating a life on Mars",
+    "website": "twitter.com",
+    "location": "Fremont, CA",
+    "dateOfBirth": "2/2/1988",
+    "dateJoined": "5/2005",
+    "followingCount": 3400,
+    "followersCount": 22113,
+    "tuits": "1287"
+  }
