@@ -85,7 +85,7 @@ const TuitItem = (
                         
                     </div> */}
 
-                    <TuitStats/>
+                    <TuitStats key={post._id} post={post}/>
                 </div>
         </div>
     </div>
