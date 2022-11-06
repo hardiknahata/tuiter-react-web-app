@@ -39,15 +39,15 @@ const tuitsArraySlice = createSlice(
         },
 
         likeTuit(state, action) {
-        const tuitIndex = state.findIndex((tuit) => tuit._id === action.payload._id)
+        const tuitIndex = state.findIndex((tuitsArray) => tuitsArray._id === action.payload._id)
         state[tuitIndex].liked = true;
         state[tuitIndex].likes = parseInt(state[tuitIndex].likes) + 1;
         },
 
         unlikeTuit(state, action) {
-        const tuitIndex = state.findIndex((tuit) => tuit._id === action.payload._id)
+        const tuitIndex = state.findIndex((tuitsArray) => tuitsArray._id === action.payload._id)
         state[tuitIndex].liked = false;
-        state[tuitIndex].likes -= 1;
+        state[tuitIndex].likes = parseInt(state[tuitIndex].likes) - 1;
         },
         
      }});

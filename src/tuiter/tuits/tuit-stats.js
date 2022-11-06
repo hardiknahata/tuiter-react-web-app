@@ -22,31 +22,30 @@ const TuitStats = (
 
     return(
         <ul className="d-flex justify-content-between list-group list-group-horizontal">
-            <li className="list-group-item text-nowrap border-0 override-lg"> <a href="#" className="text-decoration-none"> 
+            <li className="list-group-item text-nowrap border-0 override-lg text-secondary "> <a href="#" className="text-decoration-none text-secondary "> 
             <FontAwesomeIcon icon="comment" size="lg"/> <span className='text-secondary '> {post.retuits} </span> </a></li>
             
             <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" className="text-secondary text-decoration-none"> 
             <FontAwesomeIcon icon="retweet" size="lg"/> <span className='text-secondary '> {post.retuits}</span></a></li>
 
-                    { !post.liked &&
-                    <button
-                    onClick={() => likeTuitHandler(post)}
-                    className="btn btn-outline-danger float-end">
-                    Like ({post.likes})
-                    </button>
-                    }
+            { !post.liked &&
+            <button
+            onClick={() => likeTuitHandler(post)}
+            className="list-group-item text-nowrap border-0 text-secondary override-lg">
+            <FontAwesomeIcon icon="heart" size="lg"/>
+            <span className='ms-1'>{post.likes}</span>
+            </button>
+            }
 
-                    {
-                    post.liked &&
-                    <button
-                    onClick={() => unlikeTuitHandler(post)}
-                    className="btn btn-danger float-end">
-                    Liked ({post.likes})
-                    </button>
-                    }
-  
-            {/* <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" className="text-secondary text-decoration-none"> 
-            <FontAwesomeIcon icon="heart" color="red" size="lg"/> <span className='text-secondary '> {post.likes} </span></a></li> */}
+            {
+            post.liked &&
+            <button
+            onClick={() => unlikeTuitHandler(post)}
+            className="list-group-item text-nowrap border-0 text-secondary override-lg">
+            <FontAwesomeIcon icon="heart" color="red" size="lg"/>
+            <span className='ms-1'>{post.likes}</span>
+            </button>
+            }
 
             <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" className="text-secondary text-decoration-none"> 
             <FontAwesomeIcon icon="share" size="lg"/></a></li>
