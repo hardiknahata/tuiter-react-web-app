@@ -1,9 +1,9 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import "./index.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {Link} from "react-router-dom";
 
-const UserProfileItem = (
+
+const UserProfile = (
     {
         profile = {
             firstName: 'Elon', 
@@ -14,7 +14,7 @@ const UserProfileItem = (
             bio: 'Creating tech to disrupt the world.',
             website: 'www.twitter.com/elonmusk',
             location: 'Fremont, CA',	
-            dateOfBirth: '7/7/1968',	
+            dateOfBirth: '21/07/1978',	
             dateJoined: '4/2009',
             followingCount: 9832,	followersCount: 63655, tuits: "1024"
         }
@@ -37,8 +37,9 @@ const UserProfileItem = (
                 </div>
                 <div className="mt-0 ms-0 position-relative">
                     <img className="w-100 ms-0 mt-0 wd-banner-image border-0" src={`${profile.bannerPicture}`}  />
-                    <img className="wd-profile-picture rounded-circle border-0" src={`${profile.profilePicture}`} />
+                    <img className="wd-profile-picture position-absolute rounded-circle border-0" src={`${profile.profilePicture}`} />
                 </div>
+                
                 <div className="mt-2">
                     <Link to="/tuiter/edit-profile" className="btn btn-outline-dark rounded-pill float-end fw-bold">Edit profile</Link>
                 </div>
@@ -79,4 +80,4 @@ const UserProfileItem = (
     );
 };
 
-export default UserProfileItem;
+export default UserProfile;

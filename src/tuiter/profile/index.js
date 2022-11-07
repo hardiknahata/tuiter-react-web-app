@@ -1,12 +1,11 @@
 import React from "react";
 import {useSelector} from "react-redux";
-import UserProfileItem from "./profile-item";
-import "./index.css";
+import UserProfile from "./profile-item";
 
 const ProfileComponent = () => {
     const profile = useSelector((state) => state.profile);
     return(
-          <UserProfileItem key={profile._id} profile={profile}/>
+          <UserProfile key={profile._id} profile={profile}/>
     );
 };
 export default ProfileComponent;

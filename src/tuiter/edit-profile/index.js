@@ -6,9 +6,9 @@ import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const EditProfile = () => {
+    const dispatch = useDispatch();
     const profileDetails = useSelector(state => state.profile);
     let [profile, setProfile]  = useState(profileDetails);
-    const dispatch = useDispatch();
     
     const editProfileHandler = () => {
         dispatch(updateProfile({
@@ -18,7 +18,8 @@ const EditProfile = () => {
             bio: profile.bio,
             location: profile.location,
             website: profile.website,
-            dateOfBirth: profile.dateOfBirth}));
+            dateOfBirth: profile.dateOfBirth
+        }));
     }
 
     return(
@@ -35,7 +36,7 @@ const EditProfile = () => {
 
             <div className="mb-5">
                 <img className="w-100 ms-0 mt-0 wd-banner-image border-0" src={`${profile.bannerPicture}`}  />
-                <img className="mt-5 wd-profile-picture rounded-circle border-0" src={`${profile.profilePicture}`} />
+                <img className="mt-5 wd-profile-picture position-absolute rounded-circle border-0" src={`${profile.profilePicture}`} />
             </div>
 
             <div className="border mt-5">
