@@ -2,7 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TuitStats from "./tuit-stats";
 import {useDispatch} from "react-redux";
-import {deleteTuit} from "../reducers/tuits-array-reducer";
+// import {deleteTuit} from "../reducers/tuits-array-reducer";
+import {deleteTuitThunk} from "../../services/tuits-thunks";
 
 const checkVerified = (post) => {
     if(post.verified){
@@ -64,8 +65,12 @@ const TuitItem = (
    ) => {
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-      dispatch(deleteTuit(id));
-    }
+        dispatch(deleteTuitThunk(id));
+      }
+     
+    // const deleteTuitHandler = (id) => {
+    //   dispatch(deleteTuit(id));
+    // }
 
     return(
         <div className="mt-2 list-group-item override-lg">
@@ -74,7 +79,7 @@ const TuitItem = (
                 <i className="bi bi-x-lg float-end"
                     onClick={() => deleteTuitHandler(post._id)}></i>
                 <a className="float-end text-secondary" href="#"> <i className="fa-solid fa-ellipsis"></i> </a>    
-                <div className="ps-2"> <b>{post.userName}</b> {checkVerified(post)} <span className = "ps-1 text-secondary">@{post.handle} {getPostTime(post)}</span>
+                <div className="ps-2"> <b>{post.username}</b> {checkVerified(post)} <span className = "ps-1 text-secondary">{post.handle} {getPostTime(post)}</span>
                 </div>
                 <div className="ps-2 pt-2 pe-1">
                     <p className="ps-1"> {renderTuit(post)} <a className="text-decoration-none"> {post.tuitTextLink} </a> </p>

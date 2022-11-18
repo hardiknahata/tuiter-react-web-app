@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {useDispatch} from "react-redux";
 import {likeTuit, unlikeTuit} from "../reducers/tuits-array-reducer";
 import {useSelector} from "react-redux";
+import { updateTuitThunk } from '../../services/tuits-thunks';
 
 const TuitStats = (
     {
@@ -28,6 +29,17 @@ const TuitStats = (
             <li className="list-group-item text-nowrap border-0 text-secondary override-lg"> <a href="#" className="text-secondary text-decoration-none"> 
             <FontAwesomeIcon icon="retweet" size="lg"/> <span className='text-secondary '> {post.retuits}</span></a></li>
 
+          
+            {/* <button>
+            Likes: {post.likes}
+
+            <i onClick={ () => dispatch(updateTuitThunk({
+              ...post,
+              likes: post.likes + 1
+            }))
+          } className="bi bi-heart-fill me-2 text-danger"> </i>
+          </button>       */}
+
             { !post.liked &&
             <button
             onClick={() => likeTuitHandler(post)}
@@ -35,7 +47,7 @@ const TuitStats = (
             <FontAwesomeIcon icon="heart" size="lg"/>
             <span className='ms-1'>{post.likes}</span>
             </button>
-            }
+            }            
 
             {
             post.liked &&
