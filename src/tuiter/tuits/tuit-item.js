@@ -60,7 +60,7 @@ const renderTuit = (post) => {
 
 const TuitItem = (
     {
-      post = { "avatarIcon": "profile-pictures/elonmusk.jpeg", "userName": "Elon Musk", "verified": true, "handle": "elonmusk", "time": "23h", "tuit": "Amazing show about @Inspiration4x mission!", "hasImage": true, "image": "inspiration4.jpeg", "hasLink": true, "link_title": "Countdown: Inspiration4 Mission to Space | Netflix Official Site", "link_text": "From training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space ...", "link_url": "netflix.com", "comments": "4.2K", "retuits": "3.5K", "likes": "37.5K" }
+      post = { "image": "profile-pictures/elonmusk.jpeg", "userName": "Elon Musk", "verified": true, "handle": "elonmusk", "time": "23h", "tuit": "Amazing show about @Inspiration4x mission!", "hasImage": true, "image": "inspiration4.jpeg", "hasLink": true, "link_title": "Countdown: Inspiration4 Mission to Space | Netflix Official Site", "link_text": "From training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space ...", "link_url": "netflix.com", "comments": "4.2K", "retuits": "3.5K", "likes": "37.5K" }
     }
    ) => {
     const dispatch = useDispatch();
@@ -74,7 +74,7 @@ const TuitItem = (
 
     return(
         <div className="mt-2 list-group-item override-lg">
-        <img className={`profile-pic float-start rounded-circle`} src={`/tuiter/images/${post.avatarIcon}`}/>
+        <img className={`profile-pic float-start rounded-circle`} src={`/tuiter/images/${post.image}`}/>
         <div className = "ps-5">
                 <i className="bi bi-x-lg float-end"
                     onClick={() => deleteTuitHandler(post._id)}></i>
